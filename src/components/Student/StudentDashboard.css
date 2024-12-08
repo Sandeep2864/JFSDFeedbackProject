@@ -1,0 +1,174 @@
+/* Reset some default styles for a clean layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #000000; /* Color for the navbar */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo h1 {
+  font-size: 1.5em;
+  margin: 0;
+  color:#ffffff
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center; /* Align items vertically center */
+  gap: 1.5em;
+}
+.navbar-links button {
+  font-size: 15px;
+}
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Offset for navbar */
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 60px); /* Full height minus navbar */
+  background-color: #009952; /* Background color for sidebar */
+  color: white;
+  padding: 1em;
+  z-index: 999;
+  transition: width 0.3s ease; /* Smooth transition for sidebar width */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 30%; /* Sidebar covers 30% of the screen width */
+  }
+
+  .sidebar ul li {
+    text-align: center;
+  }
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.sidebar ul li {
+  margin: 1em 0;
+}
+
+.sidebar ul li a,
+.sidebar ul li a:link,
+.sidebar ul li a:visited {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #3399ff;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  display: flex;
+  margin-top: 60px; /* Offset for navbar */
+  margin-left: 250px; /* Sidebar width */
+  padding: 2em;
+  background-color: #248b5b;
+  transition: margin-left 0.3s ease; /* Smooth transition when sidebar collapses */
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    margin-left: 30%; /* Adjust for smaller screens with sidebar at 30% width */
+  }
+}
+
+/* Main content */
+main {
+  flex-grow: 1; /* Allow main content to take up available space */
+  background-color: #e6f2ff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the logout button */
+.logout-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Center align text inside the button */
+  justify-content: center; /* Center align text inside the button */
+}
+
+.logout-button:hover {
+  background-color: #45a049;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+  .navbar-logo h1 {
+    font-size: 1.2em; /* Decrease text size when screen width is less than 1200px */
+  }
+
+  .navbar-links a {
+    font-size: 0.9em; /* Decrease link text size */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo h1 {
+    font-size: 1em; /* Further decrease text size for smaller screens */
+  }
+
+  .navbar-links a {
+    font-size: 0.8em; /* Further decrease link text size */
+  }
+}

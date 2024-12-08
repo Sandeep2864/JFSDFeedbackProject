@@ -1,0 +1,107 @@
+/* Reset some default styles for a clean layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Container to hold the image and the form */
+.auth-container {
+  display: flex;
+  width: 134vh; /* Increase overall width */
+  max-width: 1400px; /* Increase max width */
+  background-color: #938383;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 80vh; /* Increase height of the container */
+}
+
+/* Left side for the image */
+.auth-image {
+  flex: 2;
+  background: url('./laptop1.png') no-repeat center center/cover; /* Placeholder image */
+}
+
+/* Right side for the form */
+.auth-form {
+  flex: 1; /* Exactly 50% width */
+  padding: 60px; /* Increase padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form h2 {
+  margin-bottom: 20px;
+  font-size: 28px; /* Increase font size */
+  color: #333;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 15px; /* Increase padding */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-form button {
+  padding: 15px; /* Increase padding */
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-form button:hover {
+  background: #0056b3;
+}
+
+.auth-form .error {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+.auth-form .switch-link {
+  margin-top: 10px;
+  font-size: 16px; /* Increase font size */
+  color: black; /* Change link color to black */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.auth-form .switch-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+  }
+
+  .auth-image {
+    height: 200px;
+  }
+
+  .auth-form {
+    padding: 20px;
+  }
+}

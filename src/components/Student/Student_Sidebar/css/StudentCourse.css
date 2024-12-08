@@ -1,0 +1,108 @@
+/* Container styles */
+.course-list-container, .review-form-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Course list styles */
+  .course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  /* Course box styles with default colors */
+  .course-box {
+    border: 1px solid #aaa;
+    padding: 20px;
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+  }
+  
+  /* Assigning each course box a unique color */
+  .course-box:nth-child(1) { background-color: #ff9999; /* Red */ }
+  .course-box:nth-child(2) { background-color: #99ccff; /* Blue */ }
+  .course-box:nth-child(3) { background-color: #ffcc99; /* Orange */ }
+  .course-box:nth-child(4) { background-color: #ccff99; /* Light Green */ }
+  .course-box:nth-child(5) { background-color: #ffff99; /* Yellow */ }
+  
+  .course-box h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0 0 10px;
+  }
+  
+  .course-box p {
+    font-size: 0.9em;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  /* Hover effects with color transition and animation */
+  .course-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    animation: randomColors 3s infinite alternate;
+  }
+  
+  .course-box:hover h3 {
+    color: #222;
+  }
+  
+  .course-box:hover p {
+    color: #222;
+  }
+  
+  /* Keyframes for random color animation on hover */
+  @keyframes randomColors {
+    0% { background-color: #ffcccc; }
+    25% { background-color: #ccffcc; }
+    50% { background-color: #ccccff; }
+    75% { background-color: #ffccff; }
+    100% { background-color: #ffffcc; }
+  }
+  
+  /* Styling for the review form */
+  .review-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-form label {
+    margin: 10px 0;
+  }
+  
+  .review-form input, .review-form select, .review-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .review-form button {
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .review-form button:hover {
+    background: #45a049;
+  }
+  
